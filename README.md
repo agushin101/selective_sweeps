@@ -1,7 +1,7 @@
 # selective_sweeps
 
 This project aims to understand whether the addition of a spatial structure to a population reduces the accuracy of estimators for the location of
-a selective sweep.
+a selective sweep. The specific parameters used are outlined in the procedure file.
 
 calc_well_mixed.sh produces an MSMS (https://www.mabs.at/publications/software-msms/) command that simulates a sweep through a well-mixed population.
 
