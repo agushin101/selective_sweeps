@@ -1,7 +1,7 @@
 from os import path
 
-inputVal = "high_r.txt"
-outputStart = "result_high_r_"
+inputVal = "mixed_10^-6.txt"
+outputStart = "mixed_integer_bases_"
 mapLoci = {}
 lociList = []
 flagged = set()
@@ -60,7 +60,8 @@ with open(inputVal, "r") as file:
                 continue
             output = outputStart + str(x) + ".txt"
             for location in mapLoci:
-                writeOutput(location, mapLoci[location], output, 100)
+                
+                writeOutput(int(location * 1000000), mapLoci[location], output, 100)
             lociList = []
             mapLoci = {}
             flagged = set()
@@ -72,4 +73,4 @@ with open(inputVal, "r") as file:
 if len(mapLoci) > 0:
     output = outputStart + str(x) + ".txt"
     for location in mapLoci:
-        writeOutput(location, mapLoci[location], output, 100)
+        writeOutput(int(location * 1000000), mapLoci[location], output, 100)
